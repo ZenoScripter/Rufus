@@ -1,77 +1,117 @@
 
-# Cara Membuat Bootable Windows Menggunakan Rufus
+<div align="center">
 
-## 📌 Deskripsi
+# ⌁ Windows Bootable Creator
 
-Bootable Windows adalah media instalasi Windows yang dapat dijalankan melalui flashdisk. Salah satu aplikasi yang digunakan untuk membuat bootable adalah **Rufus**.
+### Craft your Windows installation USB with Rufus.
 
-Rufus membantu memformat flashdisk dan membuat media USB yang dapat digunakan untuk instalasi Windows.
+<p>
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"/>
+  <img src="https://img.shields.io/badge/Tool-Rufus-6C63FF?style=for-the-badge" alt="Rufus"/>
+  <img src="https://img.shields.io/badge/Guide-Installation-2EA44F?style=for-the-badge" alt="Installation Guide"/>
+</p>
 
-## 🛠️ Alat dan Bahan
+*A practical guide to creating a bootable Windows USB flash drive.*
 
-- Flashdisk dengan kapasitas yang cukup.
-- File ISO Windows.
-- Aplikasi Rufus.
-- Komputer atau laptop.
-
-> **Peringatan:** Proses pembuatan bootable akan menghapus data pada flashdisk. Cadangkan data penting sebelum memulai.
-
-## 📥 1. Download Rufus
-
-1. Buka browser di komputer.
-2. Kunjungi situs resmi Rufus: https://rufus.ie/
-3. Cari bagian **Download**.
-4. Pilih versi Rufus yang diinginkan, termasuk versi portable.
-5. Tunggu hingga proses download selesai.
-
-## 💿 2. Membuat Bootable Windows
-
-1. Hubungkan flashdisk ke komputer.
-2. Jalankan aplikasi Rufus.
-3. Klik **Yes** jika muncul permintaan izin.
-4. Pada bagian `Device`, pilih flashdisk yang akan digunakan.
-5. Pada bagian `Boot selection`, klik `SELECT`.
-6. Pilih file ISO Windows yang sudah disiapkan.
-7. Atur `Partition scheme` sesuai dengan sistem komputer:
-   - `GPT` untuk sistem UEFI.
-   - `MBR` untuk sistem Legacy BIOS.
-8. Periksa kembali pengaturannya.
-9. Klik `START`.
-10. Konfirmasikan peringatan yang muncul setelah memastikan perangkat yang dipilih sudah benar.
-11. Tunggu hingga proses selesai.
-12. Klik `CLOSE` jika proses telah berhasil.
-
-## ⚙️ 3. Mengatur Boot Priority di BIOS
-
-1. Hubungkan flashdisk bootable ke komputer tujuan.
-2. Nyalakan komputer dan masuk ke BIOS atau UEFI.
-3. Gunakan tombol yang sesuai dengan perangkat, misalnya `F2`.
-4. Buka menu `Boot`.
-5. Pilih flashdisk sebagai perangkat boot pertama, atau gunakan Boot Menu untuk memilihnya.
-6. Pastikan mode boot sesuai dengan media instalasi.
-7. Simpan pengaturan melalui `Exit Saving Changes` jika diperlukan.
-8. Komputer akan mencoba menjalankan installer Windows dari flashdisk.
-
-## ✅ 4. Memulai Instalasi Windows
-
-Jika komputer berhasil melakukan boot dari flashdisk, menu instalasi Windows akan muncul.
-
-Ikuti petunjuk pada layar untuk melanjutkan instalasi. Pastikan data penting pada penyimpanan komputer sudah dicadangkan sebelum melakukan instalasi ulang.
-
-## ⚠️ Hal yang Perlu Diperhatikan
-
-- Gunakan flashdisk yang berfungsi dengan baik.
-- Pastikan file ISO berasal dari sumber tepercaya.
-- Jangan sampai salah memilih perangkat pada Rufus.
-- Sesuaikan GPT/MBR dan UEFI/Legacy dengan kebutuhan komputer.
-- Membuat bootable tidak sama dengan menyelesaikan instalasi Windows.
-
-## 📝 Kesimpulan
-
-Rufus merupakan aplikasi untuk membuat media USB bootable dari file ISO. Dengan mengikuti langkah-langkah di atas, flashdisk dapat disiapkan sebagai media instalasi Windows.
+</div>
 
 ---
 
-**Referensi:**
-- [Situs Resmi Rufus](https://rufus.ie/)
-- [Rufus README di GitHub](https://github.com/pbatard/rufus/blob/master/README.md)
+## ◈ Overview
+
+Panduan ini menjelaskan cara membuat **bootable installer Windows** menggunakan Rufus. Flashdisk bootable dapat digunakan untuk menjalankan installer Windows pada komputer atau laptop yang kompatibel.
+
+## ⌘ Requirements
+
+Sebelum memulai, siapkan beberapa hal berikut:
+
+- ◉ **USB Flash Drive** — flashdisk dengan kapasitas yang cukup.
+- ◉ **Windows ISO** — file installer Windows dari sumber tepercaya.
+- ◉ **Rufus Utility** — aplikasi untuk membuat media bootable.
+- ◉ **PC / Laptop** — perangkat untuk menyiapkan flashdisk.
+
+> [!CAUTION]
+> Proses ini akan menghapus data pada flashdisk yang dipilih. Cadangkan seluruh file penting sebelum melanjutkan.
+
+## 01 · Download Rufus
+
+1. Buka situs resmi [Rufus](https://rufus.ie/).
+2. Gulir ke bagian **Download**.
+3. Pilih versi Rufus yang diinginkan.
+4. Tunggu hingga unduhan selesai.
+
+## 02 · Prepare the USB
+
+1. Hubungkan flashdisk ke komputer.
+2. Jalankan Rufus.
+3. Pilih **Yes** jika muncul permintaan izin.
+4. Pada bagian `Device`, pilih flashdisk yang benar.
+5. Pada bagian `Boot selection`, klik `SELECT`.
+6. Cari dan pilih file ISO Windows.
+
+## 03 · Configure Partition Scheme
+
+Sesuaikan pengaturan dengan firmware komputer tujuan.
+
+| Partition Scheme | Boot Mode |
+| :--- | :--- |
+| `GPT` | `UEFI` |
+| `MBR` | `Legacy BIOS` |
+
+> [!IMPORTANT]
+> Tabel di atas merupakan panduan umum. Kompatibilitas bergantung pada konfigurasi perangkat. Untuk komputer UEFI modern, GPT biasanya menjadi pilihan yang tepat.
+
+## 04 · Create Bootable USB
+
+Setelah semua pengaturan benar:
+
+1. Klik tombol `START`.
+2. Periksa peringatan yang ditampilkan Rufus.
+3. Konfirmasikan proses jika sudah yakin.
+4. Tunggu hingga indikator proses selesai.
+5. Klik `CLOSE`.
+
+**Status:** Flashdisk siap digunakan sebagai media instalasi jika Rufus menyelesaikan proses tanpa error.
+
+## 05 · Boot from USB
+
+1. Hubungkan flashdisk ke komputer tujuan.
+2. Nyalakan komputer dan buka BIOS/UEFI atau Boot Menu.
+3. Gunakan tombol sesuai perangkat, misalnya `F2`, `F12`, `Esc`, atau `Del`.
+4. Pilih flashdisk sebagai perangkat boot.
+5. Simpan perubahan jika diperlukan.
+6. Tunggu hingga Windows Setup muncul.
+
+## 06 · Windows Setup
+
+Setelah installer berhasil dimuat:
+
+- Pilih bahasa dan pengaturan yang tersedia.
+- Ikuti petunjuk Windows Setup.
+- Cadangkan data penting sebelum melakukan instalasi.
+- Periksa kembali disk dan partisi sebelum membuat perubahan.
+
+## ⛨ Troubleshooting
+
+| Problem | Possible Solution |
+| :--- | :--- |
+| Flashdisk tidak terdeteksi | Periksa port USB dan koneksi flashdisk. |
+| Tidak bisa boot | Periksa Boot Menu dan kompatibilitas UEFI/Legacy. |
+| File ISO tidak terbaca | Periksa file ISO dan unduh ulang jika rusak. |
+| Rufus menampilkan error | Baca pesan error dan periksa flashdisk serta pengaturan. |
+
+## ⌬ References
+
+- [Rufus Official Website](https://rufus.ie/)
+- [Rufus GitHub Repository](https://github.com/pbatard/rufus)
+- [Microsoft Windows Download](https://www.microsoft.com/software-download/)
+
+---
+
+<div align="center">
+
+### ✦ End of Documentation ✦
+
+*Learn · Prepare · Install*
+
+</div>
